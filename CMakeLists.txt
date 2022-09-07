@@ -1,6 +1,24 @@
-# The following lines of boilerplate have to be in your project's
-# CMakeLists in this exact order for cmake to work correctly
-cmake_minimum_required(VERSION 3.5)
+idf_component_register(SRCS ""
+	                     "main/ed097oc4.c"
+	                     "main/epd_driver.c"
+			                 "main/font.c"
+			                 "main/i2s_data_bus.c"
+	                     "main/rmt_pulse.c"
+			                 "main/zlib/adler32.c"
+                       "main/zlib/crc32.c"
+                       "main/zlib/gzclose.c"
+                       "main/zlib/gzread.c"
+                       "main/zlib/infback.c"
+                       "main/zlib/inflate.c"
+                       "main/zlib/trees.c"
+                       "main/zlib/zutil.c"
+                       "main/zlib/compress.c"
+                       "main/zlib/deflate.c"
+                       "main/zlib/gzlib.c"
+                       "main/zlib/gzwrite.c"
+                       "main/zlib/inffast.c"
+                       "main/zlib/inftrees.c"
+                       "main/zlib/uncompr.c"
 
-include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(lilygo-epd47-idf)
+                       INCLUDE_DIRS "main"
+		                                "main/zlib")
